@@ -3,10 +3,10 @@ const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 const sendWelcomeEmailMessage = async (email, name) => {
 	try {
-		await sgMail.send({
+		await Gmail. send({
 			to: email,
-			from: 'akeren.dev@gmail.com',
-			subject: 'Thank you for Joing the Platform!',
+			from: 'kondashriya8@gmail.com',
+			subject: 'Thank you for Joining the Platform!',
 			text: `Welcome to the app, ${name}. Let me know how you get along with the App.`
 		});
 	} catch (error) {
@@ -16,11 +16,11 @@ const sendWelcomeEmailMessage = async (email, name) => {
 
 const sendCancelationEmailMessage = async (email, name) => {
 	try {
-		await sgMail.send({
+		await Gmail. send({
 			to: email,
-			from: 'noreply@kate.dev',
+			from: 'kondashriya8@gmail.com',
 			subject: `Sorry to see you go!`,
-			text: `Goodbye, ${name}. I'd hope to see you back soon.`
+			text: `Goodbye, ${name}. I hope to see you back soon.`
 		});
 	} catch (error) {
 		console.error(error);
